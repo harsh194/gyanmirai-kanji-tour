@@ -113,7 +113,8 @@
           <li>If you don't sign in, your kanji progress, cities, stamps, scores, coins and settings are stored <strong>only on your device</strong> and we do not receive them.</li>
           <li>If you sign in, we store your account (email address and basic profile details) and a copy of your game progress on our servers, so it can be backed up and synced across your devices.</li>
           <li>You can delete your account and its synced data in the Game (<em>Me → Account → Delete account</em>) or at any time <a href="mailto:hello@gyanmirai.com">by email</a>. Deleting your GyanMirai account deletes it everywhere: on gyanmirai.com and in every GyanMirai app.</li>
-          <li>The Game shows <strong>no ads</strong>, has <strong>no in-app purchases</strong>, and contains <strong>no analytics, crash-reporting or tracking</strong> software.</li>
+          <li>The Android app shows <strong>ads from Google AdMob</strong>, which uses your device's advertising ID (in the EEA, UK and Switzerland only with your consent). Ads are never shown during a run. The web version shows no ads.</li>
+          <li>The Game has <strong>no in-app purchases</strong>, and apart from Google AdMob it contains no analytics, crash-reporting or advertising software.</li>
           <li>We do not sell your personal data.</li>
         </ul>
       </section>
@@ -138,14 +139,15 @@
         </p>
         <p>
           On Android the Game shows no permission prompts. It declares only permissions that Android
-          grants without asking: internet access (used only for the optional account and
-          sync), vibration (short haptic feedback during play) and the credential permissions that
-          Android's own Google account picker uses if you choose to sign in with Google. Tilt
+          grants without asking: internet access (for the optional account and sync, and for
+          ads), vibration (short haptic feedback during play), the advertising ID permission used by
+          Google AdMob (see <a href="#advertising">Advertising</a>) and the credential permissions
+          that Android's own Google account picker uses if you choose to sign in with Google. Tilt
           steering reads your phone's motion sensor (how far the phone is tilted left or right) to
           steer while you play; these readings are used on the device in real time and are never
           stored or sent anywhere. The Game does not access your contacts, photos, camera,
           microphone or location. Pronunciation audio and fonts ship inside the app, so playing
-          offline sends nothing anywhere.
+          offline sends nothing anywhere (ads need a connection; offline, none are loaded).
         </p>
       </section>
 
@@ -228,13 +230,39 @@
         </p>
       </section>
 
-      <section id="no-ads">
-        <h2>5. No ads, purchases, analytics or tracking</h2>
+      <section id="advertising">
+        <h2>5. Advertising (Google AdMob)</h2>
         <p>
-          The Game contains no advertising, no in-app purchases and no paid content. It includes no
-          analytics, crash-reporting or advertising software, uses no advertising identifier, and
-          does not track you across apps or websites. If this ever changes, we will update this
-          policy before the new version is released.
+          The Android app shows ads: a banner at the bottom of the menu screens (Play, Collection,
+          Me and its pages), and, from your third run on, sometimes a full-screen ad when you leave
+          the results screen after a run (at most one every second run, and never more than one
+          every two minutes). Ads are never shown during a run, on the results screen itself or
+          before your first run is over. The web version shows no ads. Ads are limited to content
+          rated for general audiences up to "parental guidance".
+        </p>
+        <p>Ads are provided by Google AdMob, which may collect:</p>
+        <ul>
+          <li>your device's advertising ID (Android Advertising ID)</li>
+          <li>IP address, approximate location derived from it, device model and operating system</li>
+          <li>ad impressions, clicks, diagnostic data and crash logs</li>
+        </ul>
+        <p>
+          Google uses this data to show, measure and (with your consent) personalize ads, and to
+          prevent fraud. See
+          <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses data from partner apps</a>
+          and the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.
+          We do not send Google your account, email address or game progress.
+        </p>
+        <h3>Your ad choices</h3>
+        <ul>
+          <li><strong>EEA, UK and Switzerland:</strong> the Game asks for your consent before personalized ads are shown. You can change your choice at any time from <em>Me → Settings → Ad privacy choices</em> in the Game.</li>
+          <li><strong>Android:</strong> you can reset or delete your advertising ID in your phone's <em>Settings → Privacy → Ads</em>.</li>
+        </ul>
+        <h3>No purchases, no other tracking</h3>
+        <p>
+          The Game has no in-app purchases and no paid content. Apart from Google AdMob as described
+          above, it includes no analytics, crash-reporting or advertising software. If this ever
+          changes, we will update this policy before the new version is released.
         </p>
       </section>
 
@@ -247,13 +275,15 @@
           <tbody>
             <tr><td>Supabase</td><td>Our backend: accounts, sign-in and sync (only if you sign in)</td><td>Email address, profile details from Google (if you use Google), user ID, game progress and settings</td></tr>
             <tr><td>Google Sign-In</td><td>Sign in (only if you choose Google)</td><td>Google receives your sign-in request, confirms your identity and shares your email address, a Google account identifier and your name and profile picture with our sign-in service</td></tr>
+            <tr><td>Google AdMob</td><td>Ads in the Android app</td><td>Advertising ID, IP address and approximate location, device information, ad interactions, diagnostic data</td></tr>
             <tr><td>Resend</td><td>Deliver the one-time sign-in code (only if you choose the email code)</td><td>Your email address and the email containing the code</td></tr>
             <tr><td>Google Play / Apple App Store</td><td>App download and updates</td><td>Handled under the store's own policy</td></tr>
           </tbody>
         </table>
         <p>
           Supabase and Resend act as our service providers (processors) and only process data to run
-          GyanMirai accounts, sign-in and sync. We do not sell personal data and do not share it for
+          GyanMirai accounts, sign-in and sync. Google AdMob processes ad data as described in
+          <a href="#advertising">Advertising</a>. We do not sell personal data and do not share it for
           any other purpose, except where required by law.
         </p>
       </section>
@@ -261,12 +291,11 @@
       <section id="children">
         <h2>7. Children</h2>
         <p>
-          Kanji Tour is a casual game for general audiences. It needs no account to play, and
-          without an account nothing leaves the device, so children can play it without giving us
-          any personal data. The optional account is meant for players aged 13 and over; if you are
-          under 13, play without signing in, or ask a parent or guardian to sign in for you. We do not
-          knowingly collect personal data from children under 13. If you believe a child has created
-          an account, contact us and we will delete it.
+          Kanji Tour is intended for teenagers and adults (13+) and is not directed at children. Its
+          ads are limited to content rated up to "parental guidance" (see
+          <a href="#advertising">Advertising</a>). We do not knowingly collect personal data from
+          children under 13. If you believe a child has created an account or provided data through
+          the Game, contact us and we will delete it.
         </p>
       </section>
 
@@ -281,8 +310,8 @@
         <p>
           If you sign in, your account and synced progress are kept until you delete your account.
           When you delete it, it is removed from our servers straight away, and from any backups
-          within 30 days. Data held by Google and Resend is kept according to their policies linked
-          above.
+          within 30 days. Data held by Google (including AdMob) and Resend is kept according to their
+          policies linked above.
         </p>
       </section>
 
@@ -291,8 +320,8 @@
         <p>
           Depending on where you live (for example under the GDPR, UK GDPR or CCPA), you may have
           the right to access, correct or delete your personal data, or to object to its
-          processing. If you have not signed in, we do not hold your game data on any server, so
-          you can delete it at any time by clearing the Game's data, resetting your progress or
+          processing. If you have not signed in, we do not hold your game data on any server (your ad
+          choices are in <a href="#advertising">Advertising</a>), so you can delete it at any time by clearing the Game's data, resetting your progress or
           uninstalling it. If you have an account, you can delete it and its synced data: use
           <em>Me → Account → Delete account</em> in the Game as described
           <a href="#delete-account">above</a> and on our <a href="delete-account.html">account deletion page</a>, or email us. For access, correction or anything
